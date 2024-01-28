@@ -1,16 +1,16 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { config as dotenvConfig } from "dotenv";
 import routes from "./src/routes/index.js";
+import connectToMongo from "./src/config/db.js";
 
-
-dotenvConfig();
+connectToMongo();
 
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(bodyParser.json({ limit: "50kb" }));
+app.use(cors());
+app.use(express.json());
 
 const verifyApiKey = (req, res, next) => {
   const apiKey = req.headers["x-api-key"];
@@ -21,7 +21,6 @@ const verifyApiKey = (req, res, next) => {
   }
 };
 
-app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/v1/", verifyApiKey, routes);
