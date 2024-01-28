@@ -1,0 +1,33 @@
+{
+  "name": "api_blog",
+  "version": "1.0.0",
+  "description": "La API task-manager-api es una aplicación que ofrece una interfaz de programación de aplicaciones (API) para gestionar tareas pendientes de manera eficiente. Permite a los usuarios crear, editar, eliminar y visualizar tareas en su lista personal",
+  "type": "module",
+  "scripts": {
+    "start": "babel-node server.js",
+    "build": "echo 'Building is not required for this project.'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.2",
+    "mysql2-promise": "^0.1.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulfranco14/task-manager-api"
+  },
+  "author": "Saul Franco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saulfranco14/api_blog/issues"
+  },
+  "homepage": "https://github.com/saulfranco14/api_blog#readme"
+}
