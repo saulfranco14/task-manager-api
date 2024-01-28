@@ -23,10 +23,7 @@ Configura la base de datos MongoDB en `db.js`:
 
 ```javascript
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/tareaapp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost/tareaapp');
 
 ```
 
